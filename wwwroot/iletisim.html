@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Honey Books iletişim sayfası.">
+  <title>İletişim | Honey Books</title>
+  <link rel="stylesheet" href="site.css">
+  <script src="app.js" defer></script>
+</head>
+<body data-page="contact">
+  <header class="site-header contact-page-header">
+    <a class="brand" href="index.html"><span class="brand-mark">h</span><span>honey<span class="brand-light">books</span><small>HER SAYFADA YENİ BİR DÜNYA</small></span></a>
+  </header>
+  <nav class="main-nav" aria-label="Ana menü"><div class="nav-main-links"><a href="index.html">Ana sayfa</a><a href="index.html#kitaplar">Kitaplar</a><a href="index.html#kampanya">Kampanyalar</a><a href="hakkimizda.html">Hakkımızda</a><a class="active" href="iletisim.html">İletişim</a></div><div class="nav-account-links"><a href="kayit.html">Üye ol</a><a href="giris.html">Giriş yap</a><a class="button button-dark" href="sepet.html">Sepetim <span class="cart-count">0</span></a></div></nav>
+  <main class="auth-wrap contact-wrap">
+    <section class="auth-card contact-card">
+      <span class="eyebrow">BİZE ULAŞ</span>
+      <h1>İletişim</h1>
+      <p class="muted">Sorularını ve önerilerini aşağıdaki forma yazabilirsin.</p>
+      <form id="contact-form" class="contact-form contact-page-form">
+        <label>Adın<input name="name" type="text" autocomplete="name" placeholder="Adın" required></label>
+        <label>E-posta adresin<input name="email" type="email" autocomplete="email" placeholder="ornek@mail.com" required></label>
+        <label>Mesajın<textarea name="message" rows="5" placeholder="Mesajını buraya yaz…" required></textarea></label>
+        <button class="button button-honey" type="submit">Mesajı gönder</button>
+        <p id="contact-status" class="form-message" aria-live="polite"></p>
+      </form>
+      <p class="muted contact-demo-note">Gönderdiğin mesaj Honey Books veritabanına kaydedilir. E-posta ile yanıt sistemi bağlı değildir.</p>
+    </section>
+  </main>
+  <footer class="site-footer"><a class="brand brand-footer" href="index.html"><span class="brand-mark">h</span><span>honey<span class="brand-light">books</span></span></a><small>© 2026 Honey Books · Öğrenci web projesi</small></footer>
+</body>
+</html>

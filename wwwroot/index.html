@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Honey Books'ta sevdiğin kitabı keşfet.">
+  <title>Honey Books | Kitapların tatlı dünyası</title>
+  <link rel="stylesheet" href="site.css">
+  <script src="app.js" defer></script>
+</head>
+<body data-page="home">
+  <header class="site-header">
+    <a class="brand" href="index.html"><span class="brand-mark">h</span><span>honey<span class="brand-light">books</span><small>HER SAYFADA YENİ BİR DÜNYA</small></span></a>
+    <form class="search" role="search"><label class="sr-only" for="book-search">Kitap ara</label><input id="book-search" type="search" placeholder="Kitap veya yazar ara…"><button aria-label="Ara">⌕</button></form>
+  </header>
+  <nav class="main-nav" aria-label="Ana menü"><div class="nav-main-links"><a class="active" href="index.html">Ana sayfa</a><a href="#kitaplar">Kitaplar</a><a href="#kampanya">Kampanyalar</a><a href="hakkimizda.html">Hakkımızda</a><a href="iletisim.html">İletişim</a></div><div class="nav-account-links"><a href="kayit.html">Üye ol</a><a href="giris.html">Giriş yap</a><a class="button button-dark" href="sepet.html">Sepetim <span class="cart-count">0</span></a></div></nav>
+  <main class="home-layout">
+    <aside class="home-sidebar category-sidebar" aria-label="Kitap kategorileri">
+      <section class="side-card"><span class="eyebrow">RAFLARI KEŞFET</span><h2>Kategoriler</h2>
+        <div class="category-list">
+          <button class="category-link is-active" type="button" data-filter="">Tüm kitaplar <span>↗</span></button>
+          <a class="category-link category-link-page" href="korku.html">Korku <span aria-hidden="true">→</span></a>
+          <button class="category-link" type="button" data-filter="Roman">Roman</button>
+          <button class="category-link" type="button" data-filter="Polisiye">Polisiye</button>
+          <button class="category-link" type="button" data-filter="Korku">Korku &amp; Gerilim</button>
+          <button class="category-link" type="button" data-filter="Dram">Dram</button>
+          <button class="category-link" type="button" data-filter="Fantastik">Fantastik</button>
+          <button class="category-link" type="button" data-filter="Hikâye">Hikâye</button>
+          <button class="category-link" type="button" data-filter="Şiir">Şiir</button>
+          <button class="category-link" type="button" data-filter="Deneme">Deneme</button>
+          <button class="category-link" type="button" data-filter="Biyografi">Biyografi</button>
+          <button class="category-link" type="button" data-filter="Bilimsel">Bilimsel</button>
+          <button class="category-link" type="button" data-filter="Felsefi">Felsefi</button>
+          <button class="category-link" type="button" data-filter="Tarih">Tarih</button>
+          <button class="category-link" type="button" data-filter="Çocuk">Çocuk kitapları</button>
+          <button class="category-link" type="button" data-filter="Tiyatro">Tiyatro</button>
+          <button class="category-link" type="button" data-filter="Mektup">Mektup</button>
+          <button class="category-link" type="button" data-filter="Anı">Anı</button>
+          <button class="category-link" type="button" data-filter="Eleştiri">Eleştiri</button>
+          <button class="category-link" type="button" data-filter="Suç">Suç</button>
+          <button class="category-link" type="button" data-filter="Aşk-romantik">Aşk-romantik</button>
+          <button class="category-link" type="button" data-filter="Macera">Macera</button>
+          <button class="category-link" type="button" data-filter="Psikoloji">Psikoloji</button>
+          <button class="category-link" type="button" data-filter="Mitoloji">Mitoloji</button>
+          <button class="category-link" type="button" data-filter="Masal">Masal</button>
+          <button class="category-link" type="button" data-filter="Manga">Manga</button>
+          <button class="category-link" type="button" data-filter="Çizgi roman">Çizgi roman</button>
+          <button class="category-link" type="button" data-filter="Sanat">Sanat</button>
+          <button class="category-link" type="button" data-filter="Dini">Dini</button>
+          <button class="category-link" type="button" data-filter="Karikatür">Karikatür</button>
+          <button class="category-link" type="button" data-filter="Gezi">Gezi</button>
+          <button class="category-link" type="button" data-filter="Çocuk hikâyesi">Çocuk hikâyesi</button>
+        </div>
+      </section>
+    </aside>
+
+    <div class="home-content">
+      <section class="hero home-hero">
+        <div class="hero-copy"><span class="eyebrow">KENDİ HİKÂYENİ BUL</span><h1>Bir kitap,<br><em>binlerce dünya.</em></h1><p>Raflarımızda seni bekleyen yeni bir macera var. Sevdiğin türü seç, yeni hikâyeni keşfet.</p><a class="button button-honey" href="#kitaplar">Kitapları keşfet <span aria-hidden="true">→</span></a></div>
+        <div class="hero-art" aria-hidden="true"><div class="sun"></div><div class="book-stack"><span></span><span></span><span></span></div><div class="hero-plant">✳</div></div><div class="hero-note">OKUMAK<br>İYİ GELİR <span>♡</span></div>
+      </section>
+      <section class="section home-books" id="kitaplar"><div class="section-heading"><div><span class="eyebrow">SENİN İÇİN SEÇTİK</span><h2>Kitaplığın yeni favorileri</h2></div></div><p class="result-note" id="result-note" aria-live="polite"></p><div class="book-grid" id="book-grid"></div></section>
+      <section class="home-info-grid" aria-label="Honey Books hakkında ve iletişim">
+        <article class="info-card"><span class="eyebrow">BİZ KİMİZ?</span><h2>Hakkımızda</h2><p>Honey Books, kitapları keşfetmeyi ve okurları yeni hikâyelerle buluşturmayı amaçlayan bir öğrenci web projesidir.</p><a class="button button-dark info-link" href="hakkimizda.html">Hakkımızda sayfasına git <span aria-hidden="true">→</span></a></article>
+        <article class="info-card"><span class="eyebrow">BİZE ULAŞ</span><h2>İletişim</h2><p>Görüş ve önerilerin için iletişim sayfamızı ziyaret et.</p><a class="button button-dark info-link" href="iletisim.html">İletişim sayfasına git <span aria-hidden="true">→</span></a></article>
+      </section>
+    </div>
+
+    <aside class="home-sidebar right-sidebar" aria-label="Okur paneli ve kampanyalar">
+      <section class="side-card reader-card"><span class="side-icon">♡</span><span class="eyebrow">HONEY BOOKS'A HOŞ GELDİN</span><h2>Okur paneli</h2><p>Hesabına giriş yap; henüz hesabın yoksa giriş sayfasından kolayca üye ol.</p><div class="reader-actions"><a href="giris.html">Hesabım · Giriş yap</a></div></section>
+      <section class="side-card popular-card"><span class="eyebrow">OKURLARIN SEÇİMİ</span><h2>En çok okunanlar</h2><ol class="popular-list">
+        <li><a href="kitap.html?id=dexter"><span class="popular-rank">01</span><span>Dexter Karanlıkta<small>Polisiye</small></span><span class="popular-arrow">↗</span></a></li>
+        <li><a href="kitap.html?id=yaprak"><span class="popular-rank">02</span><span>Yaprak Dökümü<small>Klasik</small></span><span class="popular-arrow">↗</span></a></li>
+        <li><a href="kitap.html?id=kilitli-kapi"><span class="popular-rank">03</span><span>Kilitli Kapı<small>Gerilim</small></span><span class="popular-arrow">↗</span></a></li>
+        <li><a href="kitap.html?id=kucuk-prens"><span class="popular-rank">04</span><span>Küçük Prens<small>Masal</small></span><span class="popular-arrow">↗</span></a></li>
+      </ol></section>
+      <section class="side-card campaign-card" id="kampanya"><span class="campaign-label">BU HAFTAYA ÖZEL</span><span class="eyebrow">HONEY'DEN KÜÇÜK BİR SÜRPRİZ</span><h2>Kitaplarda<br><strong>%15 indirim</strong></h2><p>Yeni favorini seç, okuma keyfini artır.</p><a class="button button-dark" href="#kitaplar">Fırsatları keşfet <span aria-hidden="true">→</span></a><span class="campaign-decoration" aria-hidden="true">✳</span></section>
+    </aside>
+  </main>
+  <footer class="site-footer"><a class="brand brand-footer" href="index.html"><span class="brand-mark">h</span><span>honey<span class="brand-light">books</span></span></a><p>Kitapların tatlı dünyasına hoş geldin.</p><small>© 2026 Honey Books · Öğrenci web projesi</small></footer>
+</body>
+</html>
